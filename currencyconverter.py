@@ -25,11 +25,14 @@ center_y = int(screen_height/2 - window_height / 2)
 # set the position of the window to the center of the screen
 root.geometry(f'{window_width}x{window_height}+{center_x}+{center_y}')
 
-current_var = tk.StringVar()
-from_currency = ttk.Combobox(root, textvariable=current_var)
+from_current_var = tk.StringVar()
+from_currency = ttk.Combobox(root, textvariable=from_current_var)
 from_currency['values'] = ('value1', 'value2', 'value3')
 from_currency.pack(fill=tk.X, padx=5, pady=5)
 
-
+to_current_var = tk.StringVar()
+to_currency = ttk.Combobox(root, textvariable=to_current_var)
+to_currency['values'] = ('value1', 'value2', 'value3')
+to_currency.pack(fill=tk.X, padx=5, pady=5)
 
 root.mainloop()
