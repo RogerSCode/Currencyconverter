@@ -38,7 +38,7 @@ from_currency.set(currencies[0])
 from_currency['values'] = currencies 
 from_currency.pack(fill=tk.X, padx=250, pady=5)
 
-value = Text(root, height=1)
+value = Text(root, height=1,width=15)
 value.insert('1.0','0')
 value.pack()
 
@@ -52,7 +52,7 @@ to_currency.set(currencies[1])
 to_currency['values'] = currencies 
 to_currency.pack(fill=tk.X, padx=250, pady=5)
 
-output = Text(root, height=1)
+output = Text(root, height=1,width=15)
 
 output.pack()
 
