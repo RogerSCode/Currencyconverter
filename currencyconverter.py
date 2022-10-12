@@ -34,6 +34,7 @@ label1.pack(ipadx=10, ipady=10)
 
 from_current_var = tk.StringVar()
 from_currency = ttk.Combobox(root, textvariable=from_current_var)
+from_currency.set(currencies[0])
 from_currency['values'] = currencies 
 from_currency.pack(fill=tk.X, padx=5, pady=5)
 
@@ -45,6 +46,7 @@ label2.pack(ipadx=10, ipady=10)
 
 to_current_var = tk.StringVar()
 to_currency = ttk.Combobox(root, textvariable=to_current_var)
+to_currency.set(currencies[1])
 to_currency['values'] = currencies 
 to_currency.pack(fill=tk.X, padx=5, pady=5)
 
