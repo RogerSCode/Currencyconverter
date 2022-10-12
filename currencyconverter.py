@@ -4,6 +4,7 @@ from tkinter.ttk import Label
 
 from currency_converter import CurrencyConverter
 
+c = CurrencyConverter()
 
 root = tk.Tk()
 
@@ -33,6 +34,11 @@ from_currency = ttk.Combobox(root, textvariable=from_current_var)
 from_currency['values'] = ('value1', 'value2', 'value3') # TODO insert real currency 
 from_currency.pack(fill=tk.X, padx=5, pady=5)
 
+def change_from_currency(event):
+    pass
+
+from_currency.bind('<<ComboboxSelected>>', change_from_currency)
+
 
 label2 = Label(root, text='Convert to:')
 label2.pack(ipadx=10, ipady=10)
@@ -41,5 +47,8 @@ to_current_var = tk.StringVar()
 to_currency = ttk.Combobox(root, textvariable=to_current_var)
 to_currency['values'] = ('value1', 'value2', 'value3') # TODO insert real currency 
 to_currency.pack(fill=tk.X, padx=5, pady=5)
+
+
+ttk.Button(root, text='Convert', command=lambda: c.convert(100, 'EUR', 'USD')).pack() #TODO replace dummyargs with real ones
 
 root.mainloop()
