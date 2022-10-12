@@ -36,7 +36,7 @@ from_current_var = tk.StringVar()
 from_currency = ttk.Combobox(root, textvariable=from_current_var)
 from_currency.set(currencies[0])
 from_currency['values'] = currencies 
-from_currency.pack(fill=tk.X, padx=5, pady=5)
+from_currency.pack(fill=tk.X, padx=250, pady=5)
 
 value = Text(root, height=1)
 value.pack()
@@ -48,7 +48,7 @@ to_current_var = tk.StringVar()
 to_currency = ttk.Combobox(root, textvariable=to_current_var)
 to_currency.set(currencies[1])
 to_currency['values'] = currencies 
-to_currency.pack(fill=tk.X, padx=5, pady=5)
+to_currency.pack(fill=tk.X, padx=250, pady=5)
 
 output = Text(root, height=1)
 #output['state'] = 'disabled'
