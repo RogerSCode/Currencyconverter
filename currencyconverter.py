@@ -5,9 +5,9 @@ from tkinter import Text
 from currency_converter import CurrencyConverter
 
 
-currencies = ('EUR','USD') # TODO needs more Currencies
 
 c = CurrencyConverter()
+currencies = tuple(c.currencies)
 
 root = tk.Tk()
 
