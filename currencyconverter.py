@@ -37,10 +37,9 @@ from_currency = ttk.Combobox(root, textvariable=from_current_var)
 from_currency['values'] = currencies 
 from_currency.pack(fill=tk.X, padx=5, pady=5)
 
-def change_from_currency(event):
-    pass
 
-from_currency.bind('<<ComboboxSelected>>', change_from_currency)
+
+
 
 
 label2 = Label(root, text='Convert to:')
