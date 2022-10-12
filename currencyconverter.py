@@ -49,6 +49,6 @@ to_currency['values'] = ('value1', 'value2', 'value3') # TODO insert real curren
 to_currency.pack(fill=tk.X, padx=5, pady=5)
 
 
-ttk.Button(root, text='Convert', command=lambda: c.convert(100, 'EUR', 'USD')).pack() #TODO replace dummyargs with real ones
+ttk.Button(root, text='Convert', command=lambda: c.convert(100, from_currency.get(), to_currency.get())).pack() #TODO replace dummyargs with real ones
 
 root.mainloop()
