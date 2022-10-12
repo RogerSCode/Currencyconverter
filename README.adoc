@@ -1,3 +1,3 @@
 ## Currency converter
 
-A simple GUI based currency converter based on Tkinter and CurrencyConverter 0.17.1. The conversions have the European Central Bank as scource
+A simple GUI based currency converter based on Tkinter and CurrencyConverter 0.17.1. The conversions have the European Central Bank as source.
