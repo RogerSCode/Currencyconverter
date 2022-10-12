@@ -39,10 +39,12 @@ from_currency['values'] = currencies
 from_currency.pack(fill=tk.X, padx=250, pady=5)
 
 value = Text(root, height=1)
+value.insert('1.0','0')
 value.pack()
 
 label2 = Label(root, text='Convert to:')
 label2.pack(ipadx=10, ipady=10)
+
 
 to_current_var = tk.StringVar()
 to_currency = ttk.Combobox(root, textvariable=to_current_var)
@@ -51,7 +53,7 @@ to_currency['values'] = currencies
 to_currency.pack(fill=tk.X, padx=250, pady=5)
 
 output = Text(root, height=1)
-#output['state'] = 'disabled'
+
 output.pack()
 
 ttk.Button(root, text='Convert', command=lambda: output.insert(1.0, c.convert(value.get('1.0','end'), from_currency.get(), to_currency.get()))).pack() #TODO replace dummyargs with real ones
